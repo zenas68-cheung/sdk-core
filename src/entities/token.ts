@@ -30,6 +30,7 @@ export class Token extends BaseCurrency {
    * @param decimals {@link BaseCurrency#decimals}
    * @param symbol {@link BaseCurrency#symbol}
    * @param name {@link BaseCurrency#name}
+   * @param logo {@link BaseCurrency#logo}
    * @param bypassChecksum If true it only checks for length === 42, startsWith 0x and contains only hex characters
    * @param buyFeeBps Buy fee tax for FOT tokens, in basis points
    * @param sellFeeBps Sell fee tax for FOT tokens, in basis points
@@ -40,11 +41,12 @@ export class Token extends BaseCurrency {
     decimals: number,
     symbol?: string,
     name?: string,
+    logo?: string,
     bypassChecksum?: boolean,
     buyFeeBps?: BigNumber,
     sellFeeBps?: BigNumber
   ) {
-    super(chainId, decimals, symbol, name)
+    super(chainId, decimals, symbol, name, logo)
     if (bypassChecksum) {
       this.address = checkValidAddress(address)
     } else {

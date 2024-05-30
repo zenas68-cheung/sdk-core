@@ -31,6 +31,10 @@ export abstract class BaseCurrency {
    * The name of the currency, i.e. a descriptive textual non-unique identifier
    */
   public readonly name?: string
+  /**
+   * The logo of the currency, i.e. a URL to an image
+   */
+  public readonly logo?: string
 
   /**
    * Constructs an instance of the base class `BaseCurrency`.
@@ -38,8 +42,9 @@ export abstract class BaseCurrency {
    * @param decimals decimals of the currency
    * @param symbol symbol of the currency
    * @param name of the currency
+   * @param logo of the currency
    */
-  protected constructor(chainId: number, decimals: number, symbol?: string, name?: string) {
+  protected constructor(chainId: number, decimals: number, symbol?: string, name?: string, logo?: string) {
     invariant(Number.isSafeInteger(chainId), 'CHAIN_ID')
     invariant(decimals >= 0 && decimals < 255 && Number.isInteger(decimals), 'DECIMALS')
 
@@ -47,6 +52,7 @@ export abstract class BaseCurrency {
     this.decimals = decimals
     this.symbol = symbol
     this.name = name
+    this.logo = logo
   }
 
   /**
