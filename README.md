@@ -1,7 +1,6 @@
-# @uniswap/sdk-core - Now at `Uniswap/sdks`
+# Uniswap SDK Core
 
-All versions after 4.2.0 of this SDK can be found in the [SDK monorepo](https://github.com/Uniswap/sdks/tree/main/sdks/sdk-core)! Please file all future issues, PR’s, and discussions there.
+[![npm version](https://img.shields.io/npm/v/@uniswap/sdk-core/latest.svg)](https://www.npmjs.com/package/@uniswap/sdk-core/v/latest)
+[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@uniswap/sdk-core/latest.svg)](https://bundlephobia.com/result?p=@uniswap/sdk-core@latest)
 
-### Old Issues and PR’s
-
-If you have an issue or open PR that is still active on this SDK in this repository, please recreate it in the new repository. Some existing issues and PR’s may be automatically migrated by the Uniswap Labs team.
+This code is shared across Uniswap TypeScript SDKs.
